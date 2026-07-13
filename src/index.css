@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;:root {
+    color-scheme: dark;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: auto;
+}
+
+body {
+    margin: 0;
+    background-color: #0c0c0c;
+    color: #f2f2f0;
+    font-family: "Inter", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+::-webkit-scrollbar-track {
+    background: #0c0c0c;
+}
+::-webkit-scrollbar-thumb {
+    background: #262626;
+    border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #d4ff3f;
+}
+
+::selection {
+    background: #d4ff3f;
+    color: #0c0c0c;
+}
+
+/* Big display text tuning */
+.display {
+    font-family: "Anton", Impact, sans-serif;
+    letter-spacing: -0.01em;
+    line-height: 0.92;
+    text-transform: uppercase;
+}
+
+.text-stroke {
+    -webkit-text-stroke: 1.5px #d4ff3f;
+    color: transparent;
+}
+
+@media(prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.001ms !important;
+        transition-duration: 0.001ms !important;
+    }
+}
