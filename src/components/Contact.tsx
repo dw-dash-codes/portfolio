@@ -13,7 +13,6 @@ export default function Contact() {
         </Reveal>
 
         <div className="mt-8 grid gap-12 lg:grid-cols-[1fr_1.2fr]">
-          {/* Left Column: Let's work together + Details */}
           <div>
             <Reveal delay={0.1}>
               <h2 className="display text-[12vw] leading-none text-ink md:text-[8vw] lg:text-[7vw]">
@@ -83,7 +82,6 @@ export default function Contact() {
             </Reveal>
           </div>
 
-          {/* Right Column: Contact Form Panel */}
           <Reveal delay={0.2}>
             <div className="border border-line bg-surface p-6 md:p-8">
               <h3 className="font-mono text-xs uppercase tracking-widest text-accent mb-6">

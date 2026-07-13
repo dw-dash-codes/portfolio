@@ -21,7 +21,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Lenis */
 html.lenis,
 html.lenis body {
     height: auto;
@@ -52,7 +51,6 @@ html.lenis body {
     color: #0c0c0c;
 }
 
-/* Big display text tuning */
 .display {
     font-family: "Anton", Impact, sans-serif;
     letter-spacing: -0.01em;

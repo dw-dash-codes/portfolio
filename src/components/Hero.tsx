@@ -69,7 +69,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Marquee strip */}
       <div className="mt-16 select-none overflow-hidden border-y border-line py-4">
         <div className="flex w-max animate-marquee whitespace-nowrap">
           {[...Array(2)].map((_, dup) => (

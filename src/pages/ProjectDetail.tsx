@@ -47,7 +47,6 @@ export default function ProjectDetail() {
             ← Back to work
           </Link>
 
-          {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -68,7 +67,6 @@ export default function ProjectDetail() {
             </p>
           </motion.div>
 
-          {/* Action links */}
           <div className="mt-8 flex flex-wrap gap-3">
             {links.map((l) => (
               <a
@@ -87,7 +85,6 @@ export default function ProjectDetail() {
             ))}
           </div>
 
-          {/* Project Image Banner */}
           <div className="relative mt-12 overflow-hidden border border-line aspect-video w-full md:max-h-[400px] bg-surface">
             {project.detailImage ? (
               <img
@@ -105,12 +102,10 @@ export default function ProjectDetail() {
             )}
           </div>
 
-          {/* Summary */}
           <p className="mt-12 text-2xl leading-relaxed text-ink md:text-3xl md:leading-relaxed">
             {project.summary}
           </p>
 
-          {/* Tech stack */}
           <section className="mt-14 border-t border-line pt-8">
             <h2 className="font-mono text-xs uppercase tracking-widest text-accent">
               Tech Stack
@@ -127,7 +122,6 @@ export default function ProjectDetail() {
             </div>
           </section>
 
-          {/* Problem */}
           <section className="mt-12 border-t border-line pt-8">
             <h2 className="font-mono text-xs uppercase tracking-widest text-accent">
               The Problem
@@ -137,7 +131,6 @@ export default function ProjectDetail() {
             </p>
           </section>
 
-          {/* Solution */}
           <section className="mt-12 border-t border-line pt-8">
             <h2 className="font-mono text-xs uppercase tracking-widest text-accent">
               The Solution
@@ -147,7 +140,6 @@ export default function ProjectDetail() {
             </p>
           </section>
 
-          {/* Features */}
           <section className="mt-12 border-t border-line pt-8">
             <h2 className="font-mono text-xs uppercase tracking-widest text-accent">
               Key Features
@@ -167,7 +159,6 @@ export default function ProjectDetail() {
             </ul>
           </section>
 
-          {/* Architecture */}
           <section className="mt-12 border-t border-line pt-8">
             <h2 className="font-mono text-xs uppercase tracking-widest text-accent">
               Architecture — How It Works
@@ -177,7 +168,6 @@ export default function ProjectDetail() {
             </p>
           </section>
 
-          {/* Footer nav */}
           <div className="mt-16 border-t border-line pt-8">
             <Link
               to="/#work"

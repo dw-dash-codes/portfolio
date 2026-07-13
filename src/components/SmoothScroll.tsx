@@ -43,7 +43,6 @@ export default function SmoothScroll() {
     };
   }, []);
 
-  // Scroll to hash element on routing/navigation changes
   useEffect(() => {
     if (location.hash && lenisRef.current) {
       const timer = setTimeout(() => {

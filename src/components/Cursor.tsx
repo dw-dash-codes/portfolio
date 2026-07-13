@@ -5,7 +5,6 @@ export default function Cursor() {
   const ringRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Only on devices with a fine pointer (skip touch)
     if (!window.matchMedia("(pointer: fine)").matches) return;
 
     const dot = dotRef.current!;
@@ -14,11 +13,18 @@ export default function Cursor() {
     let mouseY = window.innerHeight / 2;
     let ringX = mouseX;
     let ringY = mouseY;
+    let isVisible = false;
 
     const move = (e: MouseEvent) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
       dot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+
+      if (!isVisible) {
+        isVisible = true;
+        dot.style.opacity = "1";
+        ring.style.opacity = "1";
+      }
     };
 
     const hoverOn = () => ring.classList.add("cursor-grow");
@@ -54,13 +60,13 @@ export default function Cursor() {
     <>
       <div
         ref={dotRef}
-        className="pointer-events-none fixed left-0 top-0 z-[100] -ml-1 -mt-1 h-2 w-2 rounded-full bg-accent mix-blend-difference"
-        style={{ willChange: "transform" }}
+        className="pointer-events-none fixed left-0 top-0 z-[100] -ml-1 -mt-1 h-2 w-2 rounded-full bg-accent mix-blend-difference transition-opacity duration-200"
+        style={{ willChange: "transform", opacity: 0 }}
       />
       <div
         ref={ringRef}
-        className="cursor-ring pointer-events-none fixed left-0 top-0 z-[100] -ml-4 -mt-4 h-8 w-8 rounded-full border border-accent/60 transition-[width,height,margin] duration-200 mix-blend-difference"
-        style={{ willChange: "transform" }}
+        className="cursor-ring pointer-events-none fixed left-0 top-0 z-[100] -ml-4 -mt-4 h-8 w-8 rounded-full border border-accent/60 transition-[width,height,margin,opacity] duration-200 mix-blend-difference"
+        style={{ willChange: "transform", opacity: 0 }}
       />
       <style>{`
         .cursor-ring.cursor-grow {

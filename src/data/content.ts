@@ -1,8 +1,3 @@
-// ============================================================
-//  ALL YOUR CONTENT LIVES HERE.
-//  Edit this file to update the whole site.
-// ============================================================
-
 export const profile = {
   name: "Danish Waheed",
   firstName: "Danish",

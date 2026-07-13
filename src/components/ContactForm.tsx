@@ -16,7 +16,6 @@ export default function ContactForm() {
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-    // Check if the user has configured EmailJS credentials
     const isConfigured =
       serviceId &&
       templateId &&
@@ -29,7 +28,6 @@ export default function ContactForm() {
       console.warn(
         "EmailJS is running in Demo Mode. To send actual emails, configure VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, and VITE_EMAILJS_PUBLIC_KEY in your .env file."
       );
-      // Simulate sending in demo mode
       setTimeout(() => {
         setStatus("success");
         formRef.current?.reset();
