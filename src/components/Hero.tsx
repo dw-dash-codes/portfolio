@@ -89,7 +89,7 @@ export default function Hero() {
                   className="mx-6 font-mono text-sm uppercase tracking-widest text-muted"
                 >
                   {w}{" "}
-                  <span className="text-accent">✦</span>
+                  <span className="text-accent">•</span>
                 </span>
               ))}
             </div>
