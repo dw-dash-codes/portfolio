@@ -7,7 +7,7 @@ export default function Stack() {
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent">
-            [ 03 ] Tech Stack
+            [ 04 ] Tech Stack
           </p>
           <h2 className="display mt-3 text-6xl text-ink md:text-8xl">
             Toolbox

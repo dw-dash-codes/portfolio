@@ -1,10 +1,11 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
+import Experience from "@/components/Experience";
 import Work from "@/components/Work";
 import About from "@/components/About";
 import Stack from "@/components/Stack";
-import Experience from "@/components/Experience";
+import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 
 export default function Home() {
@@ -14,10 +15,11 @@ export default function Home() {
       <main>
         <Hero />
         <Stats />
+        <Experience />
         <Work />
         <About />
         <Stack />
-        <Experience />
+        <Education />
         <Contact />
       </main>
     </>

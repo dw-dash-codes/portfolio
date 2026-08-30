@@ -8,7 +8,7 @@ export default function Contact() {
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent">
-            [ 05 ] Contact
+            [ 06 ] Contact
           </p>
         </Reveal>
 
@@ -35,10 +35,10 @@ export default function Contact() {
               <div className="mt-12 grid gap-6 border-t border-line pt-8 sm:grid-cols-2">
                 <div>
                   <p className="font-mono text-xs uppercase tracking-widest text-muted">
-                    Upwork
+                    Fiverr
                   </p>
                   <a
-                    href={profile.upwork}
+                    href={profile.fiverr}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-1 block text-ink hover:text-accent transition-colors"

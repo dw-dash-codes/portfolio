@@ -3,9 +3,11 @@ import { Link, useLocation } from "react-router-dom";
 import { profile } from "@/data/content";
 
 const links = [
+  { label: "Experience", href: "#experience" },
   { label: "Work", href: "#work" },
   { label: "About", href: "#about" },
   { label: "Stack", href: "#stack" },
+  { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
 ];
 

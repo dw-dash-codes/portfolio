@@ -11,7 +11,7 @@ export default function Work() {
           <div className="flex items-end justify-between border-b border-line pb-6">
             <div>
               <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent">
-                [ 01 ] Selected Work
+                [ 02 ] Selected Work
               </p>
               <h2 className="display mt-3 text-6xl text-ink md:text-8xl">
                 Projects

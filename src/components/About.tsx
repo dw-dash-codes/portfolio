@@ -7,7 +7,7 @@ export default function About() {
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent">
-            [ 02 ] About
+            [ 03 ] About
           </p>
         </Reveal>
 
@@ -31,7 +31,7 @@ export default function About() {
                 <div className="flex justify-between border-b border-line pb-3">
                   <dt className="text-muted">Role</dt>
                   <dd className="text-right text-ink">
-                    {profile.role} / {profile.role2}
+                    {profile.role}
                   </dd>
                 </div>
                 <div className="flex justify-between border-b border-line pb-3">
@@ -41,7 +41,7 @@ export default function About() {
                 <div className="flex justify-between border-b border-line pb-3">
                   <dt className="text-muted">Focus</dt>
                   <dd className="text-right text-ink">
-                    .NET · React · Azure
+                    MERN · .NET · Azure
                   </dd>
                 </div>
                 <div className="flex justify-between">

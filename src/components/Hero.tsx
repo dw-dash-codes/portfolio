@@ -25,7 +25,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="block text-[15vw] md:text-[11vw]"
           >
-            Full-Stack
+            Full Stack
           </motion.span>
           <motion.span
             initial={{ opacity: 0, y: 40 }}
@@ -33,7 +33,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.32 }}
             className="block text-[15vw] md:text-[11vw]"
           >
-            <span className="text-accent">.NET</span> Developer
+            <span className="text-accent">Developer</span>
           </motion.span>
         </h1>
 
@@ -74,13 +74,15 @@ export default function Hero() {
           {[...Array(2)].map((_, dup) => (
             <div key={dup} className="flex items-center">
               {[
-                "ASP.NET CORE",
                 "REACT.JS",
+                "NODE.JS",
+                "EXPRESS.JS",
+                "MONGODB",
+                "ASP.NET CORE",
                 "AZURE",
                 "EF CORE",
                 "SIGNALR",
                 "C#",
-                "SQL SERVER",
               ].map((w) => (
                 <span
                   key={w + dup}
