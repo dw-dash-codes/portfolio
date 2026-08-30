@@ -40,7 +40,7 @@ export default function Experience() {
                   <h3 className="text-2xl font-semibold text-ink md:text-3xl">
                     {exp.role}
                   </h3>
-                  <p className="mt-1 font-mono text-base font-medium text-accent">
+                  <p className="mt-1 font-mono font-medium text-accent">
                     {exp.company}
                   </p>
 
