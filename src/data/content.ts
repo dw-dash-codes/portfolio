@@ -303,7 +303,7 @@ export const projects: Project[] = [
             "Client / Swagger UI → Microsoft Azure App Service (ASP.NET Core 9 Controllers) → Repository Pattern & Business Layer → Entity Framework Core → Azure SQL Database | SignalR Hub for WebSockets.",
         liveUrl:
             "https://skill-square-api-egdtcsapcnegb6cs.austriaeast-01.azurewebsites.net/index.html",
-        repoUrl: "https://github.com/dw-dash-codes/SkillSquare-API",
+        repoUrl: "https://github.com/dw-dash-codes/SkillSquareWebAPI-Project",
         accent: "#512bd4",
         image: "/projects/backend-api.png",
         detailImage: "/projects/backend-api-detailed.jpg",
