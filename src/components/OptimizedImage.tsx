@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 interface OptimizedImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   containerClassName?: string;
+  priority?: boolean;
 }
 
 export default function OptimizedImage({
@@ -9,29 +10,37 @@ export default function OptimizedImage({
   alt = "",
   className = "",
   containerClassName = "",
+  priority = false,
   ...props
 }: OptimizedImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
+  const imgRef = useRef<HTMLImageElement | null>(null);
+
+  useEffect(() => {
+    if (imgRef.current && imgRef.current.complete) {
+      setIsLoaded(true);
+    }
+  }, [src]);
 
   return (
     <div className={`relative overflow-hidden bg-surface ${containerClassName}`}>
-      {/* Subtle skeleton shimmer placeholder */}
+      {/* Skeleton shimmer placeholder */}
       {!isLoaded && !hasError && (
-        <div className="absolute inset-0 animate-pulse bg-white/[0.04]" />
+        <div className="absolute inset-0 animate-pulse bg-white/[0.05]" />
       )}
 
-      {/* Actual image */}
       {!hasError ? (
         <img
+          ref={imgRef}
           src={src}
           alt={alt}
-          loading="lazy"
+          loading={priority ? "eager" : "lazy"}
           decoding="async"
           onLoad={() => setIsLoaded(true)}
           onError={() => setHasError(true)}
-          className={`h-full w-full object-cover transition-all duration-700 ease-out ${
-            isLoaded ? "opacity-100 scale-100 blur-0" : "opacity-0 scale-105 blur-sm"
+          className={`h-full w-full object-cover transition-opacity duration-300 ease-out ${
+            isLoaded ? "opacity-100" : "opacity-0"
           } ${className}`}
           {...props}
         />

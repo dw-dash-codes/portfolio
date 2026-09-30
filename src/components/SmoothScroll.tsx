@@ -2,6 +2,15 @@ import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import Lenis from "lenis";
 
+let lenisInstance: Lenis | null = null;
+
+export function scrollToTop(immediate = true) {
+  window.scrollTo(0, 0);
+  if (lenisInstance) {
+    lenisInstance.scrollTo(0, { immediate });
+  }
+}
+
 export default function SmoothScroll() {
   const lenisRef = useRef<Lenis | null>(null);
   const location = useLocation();
@@ -13,6 +22,7 @@ export default function SmoothScroll() {
       smoothWheel: true,
     });
     lenisRef.current = lenis;
+    lenisInstance = lenis;
 
     let rafId: number;
     function raf(time: number) {
@@ -40,9 +50,11 @@ export default function SmoothScroll() {
       document.removeEventListener("click", handleAnchor);
       lenis.destroy();
       lenisRef.current = null;
+      lenisInstance = null;
     };
   }, []);
 
+  // Handle route and hash changes
   useEffect(() => {
     if (location.hash && lenisRef.current) {
       const timer = setTimeout(() => {
@@ -52,6 +64,9 @@ export default function SmoothScroll() {
         }
       }, 100);
       return () => clearTimeout(timer);
+    } else {
+      // Whenever pathname changes without a hash, reset scroll immediately to top
+      scrollToTop(true);
     }
   }, [location.pathname, location.hash]);
 

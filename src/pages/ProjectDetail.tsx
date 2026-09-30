@@ -4,13 +4,14 @@ import { motion } from "framer-motion";
 import { projects } from "@/data/content";
 import Navbar from "@/components/Navbar";
 import OptimizedImage from "@/components/OptimizedImage";
+import { scrollToTop } from "@/components/SmoothScroll";
 
 export default function ProjectDetail() {
   const { slug } = useParams();
   const project = projects.find((p) => p.slug === slug);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    scrollToTop(true);
   }, [slug]);
 
   if (!project) {
