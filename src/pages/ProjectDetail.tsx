@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { projects } from "@/data/content";
 import Navbar from "@/components/Navbar";
+import OptimizedImage from "@/components/OptimizedImage";
 
 export default function ProjectDetail() {
   const { slug } = useParams();
@@ -87,10 +88,10 @@ export default function ProjectDetail() {
 
           <div className="relative mt-12 overflow-hidden border border-line aspect-video w-full md:max-h-[400px] bg-surface">
             {project.detailImage ? (
-              <img
+              <OptimizedImage
                 src={project.detailImage}
                 alt={project.title}
-                className="h-full w-full object-cover"
+                containerClassName="h-full w-full"
               />
             ) : (
               <div

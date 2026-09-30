@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { projects } from "@/data/content";
 import Reveal from "./Reveal";
+import OptimizedImage from "./OptimizedImage";
 
 export default function Work() {
   return (
@@ -35,10 +36,11 @@ export default function Work() {
                   <div className="flex flex-col gap-6 md:flex-row md:items-center md:gap-10">
                     {p.image && (
                       <div className="w-full aspect-video overflow-hidden border border-line bg-surface transition-colors duration-300 group-hover:border-accent md:w-64 md:shrink-0">
-                        <img
+                        <OptimizedImage
                           src={p.image}
                           alt={p.title}
-                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          className="group-hover:scale-105"
+                          containerClassName="h-full w-full"
                         />
                       </div>
                     )}

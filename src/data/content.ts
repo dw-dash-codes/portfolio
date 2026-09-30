@@ -227,8 +227,8 @@ export const projects: Project[] = [
         liveUrl: "https://parent-genius-theta.vercel.app/home",
         repoUrl: "https://github.com/dw-dash-codes/parentGenius.git",
         accent: "#f5a623",
-        image: "/projects/parentGenius.png",
-        detailImage: "/projects/parentGenius.png",
+        image: "/projects/parentGenius.webp",
+        detailImage: "/projects/parentGenius.webp",
     },
     {
         slug: "skillsquare",
@@ -265,8 +265,8 @@ export const projects: Project[] = [
         apiDocsUrl:
             "https://skill-square-api-egdtcsapcnegb6cs.austriaeast-01.azurewebsites.net/index.html",
         accent: "#5cc8ff",
-        image: "/projects/skillsquare.png",
-        detailImage: "/projects/skillsquare-detail.png",
+        image: "/projects/skillsquare.webp",
+        detailImage: "/projects/skillsquare-detail.webp",
     },
     {
         slug: "skill-square-api",
@@ -305,8 +305,8 @@ export const projects: Project[] = [
             "https://skill-square-api-egdtcsapcnegb6cs.austriaeast-01.azurewebsites.net/index.html",
         repoUrl: "https://github.com/dw-dash-codes/SkillSquareWebAPI-Project",
         accent: "#512bd4",
-        image: "/projects/backend-api.png",
-        detailImage: "/projects/backend-api-detailed.jpg",
+        image: "/projects/backend-api.webp",
+        detailImage: "/projects/backend-api-detailed.webp",
     },
     {
         slug: "docket",
@@ -342,8 +342,8 @@ export const projects: Project[] = [
         linkedinPostUrl:
             "https://www.linkedin.com/posts/danish-waheed-3995aa296_dotnet-reactjs-azure-share-7480213565065461760--1O5/",
         accent: "#d4ff3f",
-        image: "/projects/docket.png",
-        detailImage: "/projects/docket-detail.png",
+        image: "/projects/docket.webp",
+        detailImage: "/projects/docket-detail.webp",
     },
     {
         slug: "serveai",
@@ -376,7 +376,7 @@ export const projects: Project[] = [
             "React Native (Expo) mobile client → Node.js/Express REST API on Render → Google Gemini 2.5 Flash (@google/genai) for a 7-stage multi-agent orchestration pipeline, with Google Maps API for location services.",
         repoUrl: "https://github.com/dw-dash-codes/ServeAi.git",
         accent: "#ff7a5c",
-        image: "/projects/serveai-detail.png",
-        detailImage: "/projects/serveai.png",
+        image: "/projects/serveai-detail.webp",
+        detailImage: "/projects/serveai.webp",
     },
 ];

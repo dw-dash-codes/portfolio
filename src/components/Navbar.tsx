@@ -4,12 +4,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { profile } from "@/data/content";
 
 const links = [
-  { label: "Experience", href: "#experience", num: "01" },
-  { label: "Work", href: "#work", num: "02" },
-  { label: "About", href: "#about", num: "03" },
-  { label: "Stack", href: "#stack", num: "04" },
-  { label: "Education", href: "#education", num: "05" },
-  { label: "Contact", href: "#contact", num: "06" },
+  { label: "Home", href: "#top", num: "01" },
+  { label: "Experience", href: "#experience", num: "02" },
+  { label: "Work", href: "#work", num: "03" },
+  { label: "About", href: "#about", num: "04" },
+  { label: "Stack", href: "#stack", num: "05" },
+  { label: "Education", href: "#education", num: "06" },
+  { label: "Contact", href: "#contact", num: "07" },
 ];
 
 export default function Navbar() {
